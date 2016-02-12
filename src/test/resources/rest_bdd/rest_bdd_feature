@@ -1,8 +1,12 @@
 Feature: Simple Get Request
 
 
-  Scenario: Sending request and obtaining respond
-
+  Scenario Outline: Sending request and obtaining respond
+ scernario outline
     Given The GET request was created
-    When Client send to the server /v1/hello/name GET request
-    Then Server return grreting: name
+    When Client send to the server <name> GET request
+    Then Server return grreting: <response>
+    Examples:
+      | name | response |
+    | rttrtr | fdgdfgd |
+    | dfgdgfdg | dfgdfg |
