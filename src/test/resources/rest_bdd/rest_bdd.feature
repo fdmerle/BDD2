@@ -4,7 +4,7 @@ Feature: Simple Get Request
   Scenario Outline: Sending request and obtaining respond
  scernario outline
     Given The <requestType> request was created with parameters: <requestData>
-    When Client send to the server <name> GET request
+    When Client send to the server <name>  request
     Then Server return grreting: <response>
     Examples:
       | name | response |requestType|requestData|
