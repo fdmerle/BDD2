@@ -1,4 +1,4 @@
-package rest_bdd;
+package bdd;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,7 +21,7 @@ public class StepDefinition {
         getRequest = new RequestSender(requestVariables);
     }
 
-    @When("^Client send to the server (\\s+) GET request$")
+    @When("^Client send to the server (\\s+) request$")
     public void requestSender(String url) {
 
         respond = getRequest.requestSender(url);

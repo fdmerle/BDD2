@@ -1,4 +1,4 @@
-package rest_bdd;
+package bdd;
 
 
 import org.codehaus.jackson.map.ObjectMapper;

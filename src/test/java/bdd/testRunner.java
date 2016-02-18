@@ -1,4 +1,4 @@
-package rest_bdd;
+package bdd;
 
 /**
  * Created by dmytro_moskalenko2 on 2/9/2016.
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(format = "junit:target/junit.xml")
-public class RestTest {
+public class testRunner {
 
 
 

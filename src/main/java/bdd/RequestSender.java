@@ -1,4 +1,4 @@
-package rest_bdd;
+package bdd;
 
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;

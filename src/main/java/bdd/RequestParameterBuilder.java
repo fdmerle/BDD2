@@ -1,4 +1,4 @@
-package rest_bdd;
+package bdd;
 
 import java.util.HashMap;
 
