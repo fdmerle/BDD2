@@ -22,16 +22,16 @@ public class RequestSender {
         client = new ResteasyClientBuilder().build();
     }
 
-    public String requestSender(String url) {
+    public int requestSender(String url) {
         Response response;
-        String value;
+        int value;
         ResteasyWebTarget target = client.target(url);
         switch (requestType.requestType) {
 
             case GET:
 
                 response = target.request().get();
-                value = response.readEntity(String.class);
+                value = response.getStatus();
                 response.close();
                 return value;
 
@@ -43,10 +43,10 @@ public class RequestSender {
                 Entity<Form> entity = Entity.form(form);
                 Response serviceResponse = target.request(MediaType.APPLICATION_JSON).post(entity);
                 serviceResponse.close();
-                return serviceResponse.readEntity(String.class);
-
+                return serviceResponse.getStatus();
             default:
-                return null;
+                return 0;
+
         }
     }
 }

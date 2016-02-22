@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class RequestParameterBuilder {
 
     public HashMap<String,String> stringToHashMapTransformer(String parameterRequest) {
+        if (parameterRequest.equals("null")){return null;}
         String outsideParameterPairDelimiter = ",";
         String insideParameterPairDelimiter = "=";
         HashMap<String,String> requestParam=new HashMap<>();
